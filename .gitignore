@@ -6,3 +6,6 @@ dist/
 *.log
 .DS_Store
 uploads/
+
+# Ready-to-paste production values (never commit)
+.env.render
