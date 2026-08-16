@@ -1,0 +1,252 @@
+[
+    {
+        "id": "1",
+        "packageName": "Great Lakes Trek",
+        "duration": "6 Nights 7 Days",
+        "location": "Sonmarg",
+        "notPrice": "19999",
+        "price": "Whatsapp for quote",
+        "image": "4.jpg",
+        "bgImage": "4.jpg",
+        "mealsPlan": "MAP",
+        "vehicle": "Innova",
+        "pickAndDrop": "Srinagar Airport",
+        "description": "The Kashmir Great Lakes Trek is a stunning trekking expedition in Asia. It is a moderate to difficult level trek that covers a distance of approximately 72 km and takes about 7-8 days to complete. The trek takes you through some of the most beautiful landscapes in the Himalayas, lush meadows, pristine lakes, including Kishansar Lake, Vishansar Lake, Gadsar Lake, Satsar Lakes, and Gangbal Lake, besides the dense forests, and snow-capped peaks.The main feature of the trek is that it offers a unique camping experience, where you get to camp under the stars in some of the most beautiful locations in the Himalayas.",
+        "tourPlan": [
+            {
+                "day": "1",
+                "title": "Airport to Sonmarg",
+                "description": "You'll start your journey from Srinagar and drive to Sonmarg, which is about 80 km away. You'll drive through beautiful meadows and valleys, and the road offers stunning views of the surrounding mountains. After reaching Sonmarg, you'll set up your campsite for the night.",
+                "note": ""
+            },
+            {
+                "day": "2",
+                "title": "Sonmarg to Nichnai",
+                "description": "On the second day of the trek, you'll start your trek towards Nichnai.The trail passes through dense forests of pine and fir, and you'll cross several streams and waterfalls on the way. You'll also get to see beautiful meadows and small villages along the way. You'll reach Nichnai, which is at an altitude of 3,500 meters, in the afternoon. You'll set up your campsite for the night in Nichnai.",
+                "note": ""
+            },
+            {
+                "day": "3",
+                "title": "Nichnai to Kishansar and Vishansar lakes",
+                "description": "On day3, you'll trek to Kishansar lake, which is one of the most beautiful high altitude lakes in the region.The trail is steep and challenging, but the views of the valley and the surrounding mountains are breathtaking. You'll reach Kishansar lake, which is at an altitude of 3,800 meters, in the afternoon. After spending some time at Kishansar lake, you'll trek further to Vishansar lake, which is another beautiful high altitude lake located nearby. You'll set up your campsite for the night near Vishansar lake.",
+                "note": ""
+            },
+            {
+                "day": "4",
+                "title": "Vishansar lake to Gadsar lake",
+                "description": "After breakfast, you'll start your trek towards Gadsar lake.The trail passes through rocky terrain and you'll come across several streams and waterfalls on the way. You'll also get to see beautiful meadows and small villages along the way. You'll reach Gadsar lake, which is at an altitude of 3,700 meters, in the evening. You'll set up your campsite for the night near the lake.",
+                "note": ""
+            },
+            {
+                "day": "5",
+                "title": "Gadsar lake to Satsar lakes",
+                "description": "On day 5, you'll trek to Satsar, which is a group of seven small lakes located in a beautiful meadow. The trail passes through rocky terrain and you'll cross a few streams on the way. You'll reach Satsar, which is at an altitude of 3,800 meters, in the afternoon. You'll set up your campsite for the night near the lakes.",
+                "note": ""
+            },
+            {
+                "day": "6",
+                "title": "Satsar lakes to Gangbal lake",
+                "description": "After breakfast, you'll trek to Gangbal, which is a beautiful high altitude lake surrounded by snow-capped peaks. The trail passes through meadows and rocky terrain, and you'll come across several streams and waterfalls on the way. You'll reach Gangbal, which is at an altitude of 3,800 meters, in the evening. You'll set up your campsite for the night near the lake.",
+                "note": ""
+            },
+            {
+                "day": "7",
+                "title": "Gangbal lake to Naranag to Srinagar",
+                "description": "On the last day of the trek, you'll trek to Naranag, which is an ancient temple town located at an altitude of 2,100 meters. From Naranag, you'll drive back to Srinagar, where your trek will end. On the way back, you'll get to see beautiful meadows, valleys, and small villages.",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "packageName": "Family Tour Package",
+        "duration": "4 Nights 5 Days",
+        "location": "Srinagar",
+        "notPrice": "12999",
+        "price": "Whatsapp for quote",
+        "image": "1.jpg",
+        "bgImage": "1.jpg",
+        "mealsPlan": "MAP",
+        "vehicle": "Innova",
+        "pickAndDrop": "Srinagar Airport",
+        "description": "A 4 nights 5 days Kashmir package can provide a fulfilling and memorable experience, allowing you to explore some of the key highlights of the region. A well-designed 4 nights 5 days package often includes popular destinations like Srinagar, Gulmarg, and Pahalgam. These locations offer diverse experiences, from the tranquil beauty of Dal Lake and Mughal Gardens in Srinagar to the adventure activities and scenic landscapes of Gulmarg and the picturesque valleys of Pahalgam.",
+        "tourPlan": [
+            {
+                "day": "1",
+                "title": "Airport to Srinagar(5 Km from Srinagar Airport),Night Stay at Srinagar Hotel",
+                "description": "Our Representative will meet you at Srinagar airport for pick up. Transfer directly to the Hotel and get refreshed. If time allows visit various places in Srinagar or enjoy evening Shikara ride.For beautiful experience visit Vivanta by Taj or The Lalit for Lunch in Srinagar.Night Stay in Srinagar Hotel.\n\n<b>Places of Interest in Srinagar:</b>\nDal Lake , Mugal Gardens (Shalimar Bagh, Nishat Bagh, Chasma Shahi),Pari Mahal, Botanical Garden, Char Chinari, Shankara Charya Temple , Hari Parbat Fort, Hazrat Bal shrine, Jamia Masjid, City Market etc.\n\n<b>Famous Restaurants:</b>\nKrishna Dhaba, Sonwar | Ahdoos Restaurant | Café Liberty",
+                "note": "Two hours Shikara ride included in the package."
+            },
+            {
+                "day": "2",
+                "title": "Srinagar to Gulmarg(50 Km from Srinagar), Night Stay at Srinagar Hotel",
+                "description": "After early breakfast, check out from hotel and set out for Gulmarg. On the way visit Drung Waterfall at Tangmarg.After reaching Gulmarg, complete the check in at the hotel. Get refreshed and enjoy the snowcapped mountains from the windows of your hotel.\n\nEnjoy Gondola ride – one of the prime attractions in the Gulmarg - that takes you to mountain peaks.\n\nTake a joy ride to Mount Kongdoori and Affarwat (14,403 ft) above the sea level, though Gulmarg Gondola. The highest cable car in the world. The Line of Control (LOC) is barely a few kilometers from here. The visit to Kashmir is incomplete without visiting this peak from where once can see mountain ranges from Pakistan and Ladakh.\n\tThe view from Apharwat Peak is impressive. On a clear day you can see our three neighbors in order of appearance from left to right, Nanga Parbat (8,126m), Harmukh (5,142m) and Nun Kun (7,135m- Ladakh).\n\nBooking Gondola tickets online well in advance is advisable (Can be cancelled for refund a day before of the ride day. No cancellation is entertained on the same day.) Enjoy skiing, snowboarding, ice-hockey, ice-skating, snow scooters, snowtubes, snow sledges etc.  Night Stay in Srinagar Hotel.",
+                "note": ""
+            },
+            {
+                "day": "3",
+                "title": "Srinagar- Pahalgam(90-100 Km from Srinagar), Night Stay at Srinagar Hotel",
+                "description": "After early breakfast, check out from the Pahalgam and set out for Pahalgam Sightseeing.Pahalgam is one of the most beautiful valley’s in Kashmir having gushing river Lidder flowing.Situated among lofty hills covered with evergreen forests, its cool invigorating and pleasant climate, the melodious flow of Lidder Nallah attract tourists not only from within the country but also from abroad as well.\n\tIt is also an important transit camp on the way to holy Amar Nath Ji Cave, which is 72 Kms away from the District Head-Quarter.On the way to Pahalgam, one can visit some interesting spots like Saffron Fields, Mustard Fields, Bat Manufacturing Units, Awantipora Ruins, Apple Valley etc to name a few.\n\nOne can also visit Village Aru Valley nestled quietly in the mountains while the stream fed from the glaciers make it beautiful. Another small Valley Betab Valley is also beautiful. Later visit Chandanwanwari Village also to see nature’s bounty.\nEvening Shift to Srinagar. Night Stay in Srinagar Hotel.",
+                "note": "Aru Valley, Betab Valley cab charges are not included in the package cost.The places can be covered at an additional cost to be paid by the guest directly to the service providers at Pahalgam. The service providers like union cabs or ponies are readily available for such destinations "
+            },
+            {
+                "day": "4",
+                "title": "Srinagar to Sonmarg (90 Km from Srinagar), Night Stay at Srinagar Hotel.",
+                "description": "After breakfast, set out for most beautiful journeys as the road leading to Sonmarg runs parallel through gushing river Sindh. The journey in itself is mesmerizing.\n\nTake a stroll on the beautiful bund of the river Sindh. The River Sindh is the main attraction of the Sonmarg trip.\n\nSonmarg is the gateway to Ladakh and is known for its verdant and picturesque valleys and snow-clad peaks. River Sindh winds its way through the valley and takes care of the flora of the region that include silver birch, fir, pine and alpine flowers.   For hikers, Sonmarg is a base point for Kashmir’s famous great lakes which takes seven days to complete.\n\nAt Sonmarg, one can take pony or hire a cab (at your own cost) to Thajiwas Glacier of Zero point.  Visit Baltal Valley, Thajiwas Glacier and enjoy the breathtaking beauty of the snow laden mountain.\nShift back to Srinagar for a night stay in Hotel.",
+                "note": "Aru Valley, Batab Valley, Chandanwari, Baisaran are away from Pahalgam are not included in the package cost. The places can be covered at an additional cost to be paid by the guest directly to the service providers at Pahalgam. The service providers like union cabs or ponies are readily available for such destinations."
+            },
+            {
+                "day": "5",
+                "title": "Departure- Srinagar to Airport(15km from Dal Lake)",
+                "description": "After Early Breakfast, head towards Srinagar Airport to catch the afternoon flight back home. This way the memorable tour ends.",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "packageName": "Kashmir Exotic Package",
+        "duration": "7 Nights 8 Days",
+        "location": "Phalgham",
+        "notPrice": "1,20,999",
+        "price": "Whatsapp for quote",
+        "image": "2.jpg",
+        "bgImage": "2.jpg",
+        "mealsPlan": "MAP",
+        "vehicle": "Innova",
+        "pickAndDrop": "Srinagar Airport",
+        "description": "A 5 nights 6 days Kashmir package provides an extended duration to fully immerse yourself in the beauty and cultural richness of the region. With the extra day, you have the opportunity to explore more attractions, engage in additional activities, and soak in the serene ambiance of Kashmir.Upon arrival in Srinagar, the capital city, you will be transferred to your hotel, where you can unwind and get acquainted with your surroundings. The following day, embark on a sightseeing tour of the famous Mughal Gardens, including Shalimar Bagh, Nishat Bagh, and Chashme Shahi. These meticulously manicured gardens, adorned with vibrant flowers, cascading fountains, and serene water bodies, offer a glimpse into the grandeur of the Mughal era.",
+        "tourPlan": [
+            {
+                "day": "1",
+                "title": "Airport to Srinagar(5 Km from Srinagar Airport),Night Stay at Srinagar Hotel",
+                "description": "Our Representative will meet you at Srinagar airport for pick up. Transfer directly to the Hotel and get refreshed. If time allows visit various places in Srinagar or enjoy evening Shikara ride.For beautiful experience visit Vivanta by Taj or The Lalit for Lunch in Srinagar.Night Stay in Srinagar Hotel.\n\n<b>Places of Interest in Srinagar:</b>\nDal Lake , Mugal Gardens (Shalimar Bagh, Nishat Bagh, Chasma Shahi),Pari Mahal, Botanical Garden, Char Chinari, Shankara Charya Temple , Hari Parbat Fort, Hazrat Bal shrine, Jamia Masjid, City Market etc.\n\n<b>Famous Restaurants:</b>\nKrishna Dhaba, Sonwar | Ahdoos Restaurant | Café Liberty",
+                "note": "Two hours Shikara ride included in the package."
+            },
+            {
+                "day": "2",
+                "title": "Full Day Srinagar Sightseeing (15 Km), Night Stay at Srinagar Hotel",
+                "description": "Srinagar is the heart of Kashmir Valley. With the Himalayan Mountain Range forming a picturesque backdrop, the sparkling Dal Lake and the rows of colourful houseboats and shikaras on it, makes Srinagar a beautiful attraction. Lal Chowk, is the commercial hub in the Srinagar City while as old city in the Srinagar boats of monuments, old structures, heritage sites, centuries old shrines.\n\n<b>Some of the top popular tourist attractions:</b>\nMughal Gardens, Hari Parbat Fort, Chashme Shahi Garden and Pari Mahal. Dachigam National Park, Dal Lake, Nigeen Lake, Jamia Masjid, Hazratbal Shrine, Shankaracharya Temple, handicraft workshops for Shawl and carpet weavings etc.</br>\tThe Dachigam National Park is the main feature of the range which holds the last viable population of Kashmir stag (Hangul) and the largest population of black bear in Asia.Permission to this park is needed a day before.",
+                "note": "Most of the above places will be covered till evening 6pm before shifting back to Hotel for Night Stay. Please inform the driver well in advance, if there is any special requirement in Srinagar sightseeing apart from the above listed places."
+            },
+            {
+                "day": "3",
+                "title": "Srinagar- Pahalgam(90-100 Km from Srinagar), Night Stay at Pahalgam Hotel",
+                "description": "After early breakfast, check out from the Pahalgam and set out for Pahalgam Sightseeing.Pahalgam is one of the most beautiful valley’s in Kashmir having gushing river Lidder flowing.Situated among lofty hills covered with evergreen forests, its cool invigorating and pleasant climate, the melodious flow of Lidder Nallah attract tourists not only from within the country but also from abroad as well.\n\tIt is also an important transit camp on the way to holy Amar Nath Ji Cave, which is 72 Kms away from the District Head-Quarter.On the way to Pahalgam, one can visit some interesting spots like Saffron Fields, Mustard Fields, Bat Manufacturing Units, Awantipora Ruins, Apple Valley etc to name a few.\n\nOne can also visit Village Aru Valley nestled quietly in the mountains while the stream fed from the glaciers make it beautiful. Another small Valley Betab Valley is also beautiful. Later visit Chandanwanwari Village also to see nature’s bounty.\nNight Stay in Pahalgam",
+                "note": "Aru Valley, Betab Valley cab charges are not included in the package cost."
+            },
+            {
+                "day": "4",
+                "title": "Pahalgam (15 Km within Pahalgam), Night Stay at Phalgham Hotel",
+                "description": "After early breakfast, head for another beautiful Valley in the Pahalgam which is called Baisaran. Baisaran is a small Valley surrounded by mountains and high rise pine trees.The Baisaran is reached by Pony. The guest can hire the pony at Pahalgam for this sightseeing. Night Stay at Pahalgam.",
+                "note": "Aru Valley, Batab Valley, Chandanwari, Baisaran are away from Pahalgam are not included in the package cost. The places can be covered at an additional cost to be paid by the guest directly to the service providers at Pahalgam. The service providers like union cabs or ponies are readily available for such destinations."
+            },
+            {
+                "day": "5",
+                "title": "Pahalgam to Gulmarg(150 Km from Srinagar), Night Stay at Gulmarg",
+                "description": "After breakfast, visit Gulmarg.It is primarily a ski resort where thousands of the skiers turn up during winter months. During summers, the Gulmarg Bowl turns up a Valley of flowers.\n\nIf time allows one can visit, strawberry Valley. Also visit Rani Temple, St Mary’s Church and other places.Enjoy the beautiful snowcapped mountains from the hotel.\nEnjoy evening time at the hotel and Night Stay.",
+                "note": ""
+            },
+            {
+                "day": "6",
+                "title": "Gulmarg, Kangdoori, Affarwat(5km inside Gulmarg), Night Stay at Gulmarg Hotel.",
+                "description": "After breakfast, proceed for Gulmarg. Gulmarg is primarily a ski resort where thousands of the skiers turn up during winter months.\n\nHead towards Gondola – one of the prime attractions in the Gulmarg - that takes you to mountain peaks. \n\nTake a joy ride to Mount Kongdoori and Affarwat (14,403 ft) above the sea level, though Gulmarg Gondola. The highest cable car in the world. The Line of Control (LOC) is barely a few kilometers from here. The visit to Kashmir is incomplete without visiting this peak from where once can see mountain ranges from Pakistan and Ladakh.\n\tThe view from Apharwat Peak is impressive. On a clear day you can see our three neighbors in order of appearance from left to right, Nanga Parbat (8,126m), Harmukh (5,142m) and Nun Kun (7,135m- Ladakh).Nanga Parbat is the ninth-highest mountain on Earth, its summit at 8,126 m (26,660 ft) above sea level located in Gilgit–Baltistan, Pakistan.",
+                "note": "Booking Gondola tickets online well in advance is advisable (Can be cancelled for refund a day before of the ride day. No cancellation is entertained on the same day.) Enjoy skiing, snowboarding, ice-hockey, ice-skating, snow scooters, snowtubes, snow sledges, etc. "
+            },
+            {
+                "day": "7",
+                "title": "Gulmarg to Srinagar(50 Km from Gulmarg), Night Stay at Srinagar Houseboat",
+                "description": "After early breakfast, check out from the hotel with and head to Kashmir’s capital city, Srinagar. The hotel is nestled on the foothill of Zabrwan mountain Range. Leisurely enjoy the views of the place.\n\nThe Zabarwan Range is a short sub-mountain range between Pir Panjal and the Great Himalayan Range in the central part of the Kashmir Valley.Specifically, the range is known to be what overlooks the Dal Lake and holds the Mughal gardens of Srinagar.\n\nThe Shankaracharya Temple is built on the edge of the central part of the Zabarwan Range.On the northern slopes of the central part of the range, there are three Mughal gardens built by Emperor Shah Jahan. These include Chashma Shahi, Nishat Bagh and Shalimar Garden alongside the Pari Mahal (the fairy palace).\n\nThe Dachigam National Park is the main feature of the range which holds the last viable population of Kashmir stag (Hangul) and the largest population of black bear in Asia. Inform the travel consultant in advance about entry tickets.",
+                "note": ""
+            },
+            {
+                "day": "8",
+                "title": "Departure - Srinagar to Airport(15km from Dal Lake)",
+                "description": "After Early Breakfast, head towards Srinagar Airport to catch the afternoon flight back home. This way the memorable tour ends.",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "packageName": "Honeymoon Package",
+        "duration": "10 Nights 11 Days",
+        "location": "Phalgham",
+        "notPrice": "99,599",
+        "price": "Whatsapp for quote",
+        "image": "2.jpg",
+        "bgImage": "2.jpg",
+        "mealsPlan": "MAP",
+        "vehicle": "Etios",
+        "pickAndDrop": "Srinagar Airport",
+        "description": "Gulmarg, known as Gulmarag in Kashmiri, is a town, hill station, popular skiing destination, and notified area committee in the Baramulla district of Jammu and Kashmir, India. It is located at a distance of 31 km from Baramulla and 49 km from Srinagar.Developed in an area of 180 sq. kms, the reserve is home to endangered and protected species of fauna, flora and avifauna.Considered as one of Asia's longest and highest cable car ride, this entire ride comprises of two stages-Gulmarg to Kongdoori, and Kongdoori to Apharwat Peak.The picturesque water body is 13 kms from Gulmarg, on the foothills of the Apharwat Peaks. It is embraced by rocky-mountains and endless meadows that are covered with wildflowers.",
+        "tourPlan": [
+            {
+                "day": "1",
+                "title": "Airport to Srinagar(5 Km from Srinagar Airport),Night Stay at Srinagar Hotel",
+                "description": "Our Representative will meet you at Srinagar airport for pick up. Transfer directly to the Hotel and get refreshed. If time allows visit various places in Srinagar or enjoy evening Shikara ride.For beautiful experience visit Vivanta by Taj or The Lalit for Lunch in Srinagar.Night Stay in Srinagar Hotel.\n\n<b>Places of Interest in Srinagar:</b>\nDal Lake , Mugal Gardens (Shalimar Bagh, Nishat Bagh, Chasma Shahi),Pari Mahal, Botanical Garden, Char Chinari, Shankara Charya Temple , Hari Parbat Fort, Hazrat Bal shrine, Jamia Masjid, City Market etc.\n\n<b>Famous Restaurants:</b>\nKrishna Dhaba, Sonwar | Ahdoos Restaurant | Café Liberty",
+                "note": "Two hours Shikara ride included in the package."
+            },
+            {
+                "day": "2",
+                "title": "Full Day Srinagar Sightseeing (15 Km), Night Stay at Srinagar Hotel",
+                "description": "Srinagar is the heart of Kashmir Valley. With the Himalayan Mountain Range forming a picturesque backdrop, the sparkling Dal Lake and the rows of colourful houseboats and shikaras on it, makes Srinagar a beautiful attraction. Lal Chowk, is the commercial hub in the Srinagar City while as old city in the Srinagar boats of monuments, old structures, heritage sites, centuries old shrines.\n\n<b>Some of the top popular tourist attractions:</b>\nMughal Gardens, Hari Parbat Fort, Chashme Shahi Garden and Pari Mahal. Dachigam National Park, Dal Lake, Nigeen Lake, Jamia Masjid, Hazratbal Shrine, Shankaracharya Temple, handicraft workshops for Shawl and carpet weavings etc.</br>\tThe Dachigam National Park is the main feature of the range which holds the last viable population of Kashmir stag (Hangul) and the largest population of black bear in Asia.Permission to this park is needed a day before.",
+                "note": "Most of the above places will be covered till evening 6pm before shifting back to Hotel for Night Stay. Please inform the driver well in advance, if there is any special requirement in Srinagar sightseeing apart from the above listed places."
+            },
+            {
+                "day": "3",
+                "title": "Srinagar- Pahalgam(90-100 Km from Srinagar), Night Stay at Pahalgam Hotel",
+                "description": "After early breakfast, check out from the Pahalgam and set out for Pahalgam Sightseeing.Pahalgam is one of the most beautiful valley’s in Kashmir having gushing river Lidder flowing.Situated among lofty hills covered with evergreen forests, its cool invigorating and pleasant climate, the melodious flow of Lidder Nallah attract tourists not only from within the country but also from abroad as well.\n\tIt is also an important transit camp on the way to holy Amar Nath Ji Cave, which is 72 Kms away from the District Head-Quarter.On the way to Pahalgam, one can visit some interesting spots like Saffron Fields, Mustard Fields, Bat Manufacturing Units, Awantipora Ruins, Apple Valley etc to name a few.\n\nOne can also visit Village Aru Valley nestled quietly in the mountains while the stream fed from the glaciers make it beautiful. Another small Valley Betab Valley is also beautiful. Later visit Chandanwanwari Village also to see nature’s bounty.\nNight Stay in Pahalgam",
+                "note": "Aru Valley, Betab Valley cab charges are not included in the package cost."
+            },
+            {
+                "day": "4",
+                "title": "Pahalgam (15 Km within Pahalgam), Night Stay at Phalgham Hotel",
+                "description": "After early breakfast, head for another beautiful Valley in the Pahalgam which is called Baisaran. Baisaran is a small Valley surrounded by mountains and high rise pine trees.The Baisaran is reached by Pony. The guest can hire the pony at Pahalgam for this sightseeing. Night Stay at Pahalgam.",
+                "note": "Aru Valley, Batab Valley, Chandanwari, Baisaran are away from Pahalgam are not included in the package cost. The places can be covered at an additional cost to be paid by the guest directly to the service providers at Pahalgam. The service providers like union cabs or ponies are readily available for such destinations."
+            },
+            {
+                "day": "5",
+                "title": "Pahalgam to Gulmarg(150 Km from Srinagar), Night Stay at Gulmarg",
+                "description": "After breakfast, visit Gulmarg.It is primarily a ski resort where thousands of the skiers turn up during winter months. During summers, the Gulmarg Bowl turns up a Valley of flowers.\n\nIf time allows one can visit, strawberry Valley. Also visit Rani Temple, St Mary’s Church and other places.Enjoy the beautiful snowcapped mountains from the hotel.\nEnjoy evening time at the hotel and Night Stay.",
+                "note": ""
+            },
+            {
+                "day": "6",
+                "title": "Gulmarg, Kangdoori, Affarwat(5km inside Gulmarg), Night Stay at Gulmarg Hotel.",
+                "description": "After breakfast, proceed for Gulmarg. Gulmarg is primarily a ski resort where thousands of the skiers turn up during winter months.\n\nHead towards Gondola – one of the prime attractions in the Gulmarg - that takes you to mountain peaks. \n\nTake a joy ride to Mount Kongdoori and Affarwat (14,403 ft) above the sea level, though Gulmarg Gondola. The highest cable car in the world. The Line of Control (LOC) is barely a few kilometers from here. The visit to Kashmir is incomplete without visiting this peak from where once can see mountain ranges from Pakistan and Ladakh.\n\tThe view from Apharwat Peak is impressive. On a clear day you can see our three neighbors in order of appearance from left to right, Nanga Parbat (8,126m), Harmukh (5,142m) and Nun Kun (7,135m- Ladakh).Nanga Parbat is the ninth-highest mountain on Earth, its summit at 8,126 m (26,660 ft) above sea level located in Gilgit–Baltistan, Pakistan.",
+                "note": "Booking Gondola tickets online well in advance is advisable (Can be cancelled for refund a day before of the ride day. No cancellation is entertained on the same day.) Enjoy skiing, snowboarding, ice-hockey, ice-skating, snow scooters, snowtubes, snow sledges, etc. "
+            },
+            {
+                "day": "7",
+                "title": "Gulmarg to Srinagar(50 Km from Gulmarg), Night Stay at Srinagar Houseboat",
+                "description": "After early breakfast, check out from the hotel with and head to Kashmir’s capital city, Srinagar. The hotel is nestled on the foothill of Zabrwan mountain Range. Leisurely enjoy the views of the place.\n\nThe Zabarwan Range is a short sub-mountain range between Pir Panjal and the Great Himalayan Range in the central part of the Kashmir Valley.Specifically, the range is known to be what overlooks the Dal Lake and holds the Mughal gardens of Srinagar.\n\nThe Shankaracharya Temple is built on the edge of the central part of the Zabarwan Range.On the northern slopes of the central part of the range, there are three Mughal gardens built by Emperor Shah Jahan. These include Chashma Shahi, Nishat Bagh and Shalimar Garden alongside the Pari Mahal (the fairy palace).\n\nThe Dachigam National Park is the main feature of the range which holds the last viable population of Kashmir stag (Hangul) and the largest population of black bear in Asia. Inform the travel consultant in advance about entry tickets.",
+                "note": ""
+            },
+            {
+                "day": "8",
+                "title": "Srinagar to Sonmarg (90 Km from Srinagar), Night Stay at Sonmarg Hotel.",
+                "description": "After breakfast, set out for most beautiful journeys as the road leading to Sonmarg runs parallel through gushing river Sindh. The journey in itself is mesmerizing.\n\nTake a stroll on the beautiful bund of the river Sindh. The River Sindh is the main attraction of the Sonmarg trip.\n\nSonmarg is the gateway to Ladakh and is known for its verdant and picturesque valleys and snow-clad peaks. River Sindh winds its way through the valley and takes care of the flora of the region that include silver birch, fir, pine and alpine flowers.   For hikers, Sonmarg is a base point for Kashmir’s famous great lakes which takes seven days to complete.\n\nAt Sonmarg, one can take pony or hire a cab (at your own cost) to Thajiwas Glacier of Zero point.  Visit Baltal Valley, Thajiwas Glacier and enjoy the breathtaking beauty of the snow laden mountain.\nNight Stay in Sonmarg Hotel",
+                "note": ""
+            },
+            {
+                "day": "9",
+                "title": "Sonmarg to Srinagar(90 Km from Sonmarg), Night Stay at Srinagar",
+                "description": "After Early Breakfast, visit Rafting point and enjoy the joy rides in river rafts. Advisable for only those who have good balance and are very agile.\n\nLater, in the afternoon, return back to Srinagar. Whatever time allows, visit Mughal Gardens, Dal Lake and enjoy Shikara ride.\n\nOn the way visit, Apple Valley. Night Stay at Srinagar Hotel.",
+                "note": ""
+            },
+            {
+                "day": "10",
+                "title": "Srinagar to Aharbal(60 Km from Dal Lake), Night Stay at Houseboat",
+                "description": "After Breakfast set out for another beautiful location Aharbal Waterfall. Aharbal is a unique destination apart from other places as a high-rise waterfall from a giant cliff giving it a beautiful sight.\n\nAharbal looks more stunning in winters during snow season. A day trip to Aharbal enriching.\n\nAharbal is easily accessible from Srinagar, and it takes about two hours by car or bus via Shopian to reach there. An alternate route will take you to Aharbal via Kulgam.",
+                "note": ""
+            },
+            {
+                "day": "11",
+                "title": "Departure- Srinagar to Airport(15km from Dal Lake)",
+                "description": "After Early Breakfast, head towards Srinagar Airport to catch the afternoon flight back home. This way the memorable tour ends.",
+                "note": ""
+            }
+        ]
+    }
+]

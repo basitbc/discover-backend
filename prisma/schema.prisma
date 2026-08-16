@@ -1,0 +1,412 @@
+// Discover Kashmir — content schema.
+//
+// Replaces the static JSON files that used to live in Data/. Field names are
+// camelCase throughout; the source JSON mixed PascalCase (Title, Image, District)
+// and camelCase (packageName, bgImage), so the seed script maps between them.
+//
+// Image columns hold ONE COMPLETE path — either a legacy public/ path such as
+// "/Assets/Images/Packages/1.jpg" or a full Vercel Blob URL for anything uploaded
+// through the admin. Components must render the stored value directly and must not
+// rebuild paths from fragments the way the old JSX did.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // pooled connection, used by the app
+  directUrl = env("DIRECT_URL")   // direct connection, used by migrations
+}
+
+// ---------------------------------------------------------------------------
+// Packages
+// ---------------------------------------------------------------------------
+
+model Package {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  packageName String
+  duration    String
+  location    String
+
+  // Both prices are free text, not numbers. The seed data contains
+  // "1,20,999" and "Whatsapp for quote" — do not convert these to Decimal.
+  notPrice String? // struck-through "was" price
+  price    String
+
+
+  cardImageId Int?
+  cardImage   Image? @relation("PackageCardImage", fields: [cardImageId], references: [id], onDelete: SetNull)
+  bgImageId   Int?
+  bgImage     Image? @relation("PackageBgImage", fields: [bgImageId], references: [id], onDelete: SetNull)
+  mealsPlan   String?
+  vehicle     String?
+  pickAndDrop String?
+  description String  @db.Text // plain text, not HTML
+
+  published Boolean @default(true)
+  sortOrder Int     @default(0)
+
+  metaTitle       String?
+  metaDescription String?
+
+  tourPlan  TourPlanDay[]
+  listItems PackageListItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published, sortOrder])
+}
+
+model TourPlanDay {
+  id        Int     @id @default(autoincrement())
+  packageId Int
+  package   Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  day         String
+  title       String
+  description String  @db.Text // rich HTML (<b>, <br>)
+  note        String? @db.Text
+  sortOrder   Int     @default(0)
+
+  @@index([packageId, sortOrder])
+}
+
+// A NULL packageId marks a GLOBAL DEFAULT shared by every package.
+//
+// This mirrors today's behaviour exactly: MorePackageDetails.json was a single
+// object applied to all packages. The seed inserts every item as a global. Once a
+// package has at least one item of a given `kind`, those rows override the globals
+// for that kind only — which is what lets staff customise one package without
+// disturbing the rest.
+model PackageListItem {
+  id        Int      @id @default(autoincrement())
+  packageId Int?
+  package   Package? @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  kind      ListKind
+  text      String   @db.Text
+  sortOrder Int      @default(0)
+
+  @@index([packageId, kind, sortOrder])
+}
+
+enum ListKind {
+  INCLUSION
+  EXCLUSION
+  THING_TO_CARRY
+  MAJOR_ACTIVITY
+  TERM
+}
+
+// ---------------------------------------------------------------------------
+// Destinations
+// ---------------------------------------------------------------------------
+
+// Replaces the hardcoded array in pages/destinations/index.js.
+model District {
+  id           Int           @id @default(autoincrement())
+  name         String        @unique
+  sortOrder    Int           @default(0)
+  destinations Destination[]
+}
+
+model Destination {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  destinationName String
+  districtId      Int
+  district        District @relation(fields: [districtId], references: [id])
+
+  distance        String?
+  bestTimeToVisit String?
+  shortDes        String  @db.Text
+  description     String  @db.Text // rich HTML (<b> plus \n\n paragraph breaks)
+
+
+  cardImageId Int?
+  cardImage   Image? @relation("DestinationCardImage", fields: [cardImageId], references: [id], onDelete: SetNull)
+  bgImageId   Int?
+  bgImage     Image? @relation("DestinationBgImage", fields: [bgImageId], references: [id], onDelete: SetNull)
+  thumbnailId Int?
+  thumbnail   Image? @relation("DestinationThumbnail", fields: [thumbnailId], references: [id], onDelete: SetNull)
+
+  published Boolean @default(true)
+  sortOrder Int     @default(0)
+
+  metaTitle       String?
+  metaDescription String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published, sortOrder])
+  @@index([districtId])
+}
+
+// ---------------------------------------------------------------------------
+// Blog
+// ---------------------------------------------------------------------------
+
+model Blog {
+  id   Int    @id @default(autoincrement())
+  slug String @unique
+
+  title       String
+
+  cardImageId Int?
+  cardImage   Image? @relation("BlogCardImage", fields: [cardImageId], references: [id], onDelete: SetNull)
+  bgImageId   Int?
+  bgImage     Image? @relation("BlogBgImage", fields: [bgImageId], references: [id], onDelete: SetNull)
+  shortDes    String  @db.Text
+  description String  @db.Text // richest markup of any field: <b>, <ol>, <li>
+
+  author      String?
+  publishedAt DateTime?
+  published   Boolean   @default(true)
+  sortOrder   Int       @default(0)
+
+  metaTitle       String?
+  metaDescription String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published, sortOrder])
+}
+
+// ---------------------------------------------------------------------------
+// Homepage / site chrome
+// ---------------------------------------------------------------------------
+
+model Testimonial {
+  id          Int     @id @default(autoincrement())
+  name        String
+  place       String
+  imageId     Int?
+  image       Image? @relation("TestimonialImage", fields: [imageId], references: [id], onDelete: SetNull)
+  description String  @db.Text
+  published   Boolean @default(true)
+  sortOrder   Int     @default(0)
+}
+
+// Absorbs the hardcoded slide array in Components/HeroCarousel.
+model HeroSlide {
+  id        Int     @id @default(autoincrement())
+  imageId   Int?
+  image     Image? @relation("HeroSlideImage", fields: [imageId], references: [id], onDelete: SetNull)
+  published Boolean @default(true)
+  sortOrder Int     @default(0)
+}
+
+// Singleton — always exactly one row, id = 1.
+model SiteSettings {
+  id Int @id @default(1)
+
+  logoText       String
+  phoneNumber    String
+  email          String
+  whatsappNumber String
+  address        String @db.Text
+  about1         String @db.Text
+  about2         String @db.Text
+
+
+  aboutImageBackId  Int?
+  aboutImageBack    Image? @relation("SettingsAboutBack", fields: [aboutImageBackId], references: [id], onDelete: SetNull)
+  aboutImageFrontId Int?
+  aboutImageFront   Image? @relation("SettingsAboutFront", fields: [aboutImageFrontId], references: [id], onDelete: SetNull)
+  contactBgImageId  Int?
+  contactBgImage    Image? @relation("SettingsContactBg", fields: [contactBgImageId], references: [id], onDelete: SetNull)
+
+  /// Page banners. These were hardcoded filenames in the JSX, which meant
+  /// changing a page header required a code change and a deploy.
+  packagesBannerId     Int?
+  packagesBanner       Image? @relation("SettingsPackagesBanner", fields: [packagesBannerId], references: [id], onDelete: SetNull)
+  destinationsBannerId Int?
+  destinationsBanner   Image? @relation("SettingsDestinationsBanner", fields: [destinationsBannerId], references: [id], onDelete: SetNull)
+  blogsBannerId        Int?
+  blogsBanner          Image? @relation("SettingsBlogsBanner", fields: [blogsBannerId], references: [id], onDelete: SetNull)
+  packagesOverviewId   Int?
+  packagesOverview     Image? @relation("SettingsPackagesOverview", fields: [packagesOverviewId], references: [id], onDelete: SetNull)
+  blogSectionBgId      Int?
+  blogSectionBg        Image? @relation("SettingsBlogSectionBg", fields: [blogSectionBgId], references: [id], onDelete: SetNull)
+
+  /// Header and footer logos are separate: they render at very different sizes
+  /// and are often different marks (e.g. a light version for a dark footer).
+  headerLogoId Int?
+  headerLogo   Image? @relation("SettingsHeaderLogo", fields: [headerLogoId], references: [id], onDelete: SetNull)
+  footerLogoId Int?
+  footerLogo   Image? @relation("SettingsFooterLogo", fields: [footerLogoId], references: [id], onDelete: SetNull)
+
+  updatedAt DateTime @updatedAt
+}
+
+// ---------------------------------------------------------------------------
+// Auth
+// ---------------------------------------------------------------------------
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         Role     @default(EDITOR)
+  createdAt    DateTime @default(now())
+
+  paymentOrders PaymentOrder[]
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+// ---------------------------------------------------------------------------
+// Media library
+// ---------------------------------------------------------------------------
+
+/// A reusable image. Content records point at these rather than storing a URL,
+/// so the same photo can be used on a package, a blog and a hero slide without
+/// being uploaded three times — and re-cropping it updates every use at once.
+///
+/// `url` is the full delivery URL including Cloudinary transformations, so any
+/// consumer can render it directly without knowing which provider stored it.
+model Image {
+  id       Int     @id @default(autoincrement())
+  url      String  @db.Text
+  publicId String? @unique // Cloudinary public_id; null for legacy /Assets files
+  provider String  @default("cloudinary") // cloudinary | local | legacy
+
+  filename String
+  /// Alt text for accessibility. Lives with the image so it is written once.
+  alt      String?
+  width    Int?
+  height   Int?
+  bytes    Int?
+  format   String?
+  folder   String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  packageCards       Package[]      @relation("PackageCardImage")
+  packageBanners     Package[]      @relation("PackageBgImage")
+  destinationCards   Destination[]  @relation("DestinationCardImage")
+  destinationBanners Destination[]  @relation("DestinationBgImage")
+  destinationThumbs  Destination[]  @relation("DestinationThumbnail")
+  blogCards          Blog[]         @relation("BlogCardImage")
+  blogBanners        Blog[]         @relation("BlogBgImage")
+  testimonials       Testimonial[]  @relation("TestimonialImage")
+  heroSlides         HeroSlide[]    @relation("HeroSlideImage")
+  settingsAboutBack  SiteSettings[] @relation("SettingsAboutBack")
+  settingsAboutFront SiteSettings[] @relation("SettingsAboutFront")
+  settingsContactBg  SiteSettings[] @relation("SettingsContactBg")
+  settingsPackagesBanner     SiteSettings[] @relation("SettingsPackagesBanner")
+  settingsDestinationsBanner SiteSettings[] @relation("SettingsDestinationsBanner")
+  settingsBlogsBanner        SiteSettings[] @relation("SettingsBlogsBanner")
+  settingsPackagesOverview   SiteSettings[] @relation("SettingsPackagesOverview")
+  settingsBlogSectionBg      SiteSettings[] @relation("SettingsBlogSectionBg")
+  settingsHeaderLogo         SiteSettings[] @relation("SettingsHeaderLogo")
+  settingsFooterLogo         SiteSettings[] @relation("SettingsFooterLogo")
+
+  @@index([createdAt])
+  @@index([folder])
+}
+
+// ---------------------------------------------------------------------------
+// Payments
+// ---------------------------------------------------------------------------
+
+/// A request for money, raised by staff after quoting a trip.
+///
+/// Card data NEVER touches this server: CCAvenue is a hosted redirect gateway,
+/// so the customer types their card on CCAvenue's page. What is stored here is
+/// the order, the amounts, and whatever the gateway reports back.
+///
+/// `amount` is Decimal, not Float. Binary floating point cannot represent 0.10
+/// exactly, and money that is out by a paisa is money that fails reconciliation.
+model PaymentOrder {
+  id        Int    @id @default(autoincrement())
+  /// Public, shareable, non-guessable. This is what goes in the payment link
+  /// and what the customer quotes when they ring up.
+  reference String @unique
+
+  customerName  String
+  customerEmail String
+  customerPhone String?
+
+  amount      Decimal @db.Decimal(12, 2)
+  currency    String  @default("INR")
+  /// What the customer is paying for, in their words. Shown on the pay page.
+  description String  @db.Text
+  /// Internal only — never rendered to the customer.
+  notes       String? @db.Text
+
+  status PaymentStatus @default(PENDING)
+
+  // CCAvenue requires billing details to be posted with the order.
+  billingAddress String?
+  billingCity    String?
+  billingState   String?
+  billingZip     String?
+  billingCountry String? @default("India")
+
+  // Everything below is reported BY the gateway; never set by us.
+  trackingId     String?
+  bankRefNo      String?
+  paymentMode    String?
+  cardName       String?
+  statusMessage  String? @db.Text
+  failureMessage String? @db.Text
+  paidAt         DateTime?
+
+  /// Links can be time-limited so a stale quote cannot be paid months later.
+  expiresAt DateTime?
+
+  createdById Int?
+  createdBy   AdminUser? @relation(fields: [createdById], references: [id], onDelete: SetNull)
+
+  events PaymentEvent[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, createdAt])
+  @@index([customerEmail])
+  @@index([createdAt])
+}
+
+enum PaymentStatus {
+  PENDING   // created, customer has not started
+  INITIATED // customer was redirected to the gateway
+  SUCCESS
+  FAILED
+  ABORTED   // customer backed out at the gateway
+  CANCELLED // cancelled by staff
+  REFUNDED
+}
+
+/// Append-only audit trail. Every callback is recorded with its raw payload,
+/// so a disputed transaction can be reconstructed exactly as the gateway
+/// reported it — including callbacks that arrive twice, or out of order.
+model PaymentEvent {
+  id      Int          @id @default(autoincrement())
+  orderId Int
+  order   PaymentOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  type    String // created | initiated | callback | status_change | note
+  status  PaymentStatus?
+  message String?        @db.Text
+  /// Raw decrypted gateway response, verbatim.
+  payload Json?
+  ip      String?
+
+  createdAt DateTime @default(now())
+
+  @@index([orderId, createdAt])
+}

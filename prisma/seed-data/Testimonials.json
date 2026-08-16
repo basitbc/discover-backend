@@ -1,0 +1,20 @@
+[
+    {
+        "Name":"Ahmed khan",
+        "Place":"Delhi",
+        "image":"https://hikerwolf.com/wp-content/uploads/2021/04/Srinagar-Preview-800x800.jpg",
+        "description":"Hands down the best chicken wings I have ever eaten. My partner and I were visiting some friends in the area and these heavenly wings (and a couple of sides of rice) were the only thing requested. The wings themselves had great flavor and AMAZING crunch. But really, I think the crispiness of the wings is what makes the wings so good (and addicting). The sauce was a balanced mix of sweet and spicy (very mild, if I had to rate it), which was also great over rice."
+    },
+    {
+        "Name":"Majid khan",
+        "Place":"Mumbai",
+        "image":"https://www.deccanherald.com/sites/dh/files/articleimages/2021/12/30/pti12062021000278b-1066168-1640854263.jpg",
+        "description":"I stayed at [Hotel Name] for three nights in November 2019. What an amazing hotel. I was greeted with such kindness and this continued throughout my stay. I booked the king room and my room was situated on the 14th floor. The room was fantastic. Clean, modern, and had a fantastic view over [City]. The rooms were big for [City] standards. I can’t complain about this hotel. The gym was great, the rooftop bar was fantastic, and all of the facilities were clean and modern. The restaurant located inside the hotel, [Restaurant Name], was delicious. I dined here for breakfast and dinner."
+    },
+    {
+        "Name":"Abhijeet Rane",
+        "Place":"Delhi",
+        "image":"https://images.hindustantimes.com/img/2022/04/09/1600x900/India-Kashmir-Tourism-1_1649516088292_1649516149207.jpg",
+        "description":"Wonderful place to stay. I don’t normally stay in hostels but this was perfect – the beds are comfortable, and the rooms are quiet despite the fact that if you want to, you can spend time outside with other travelers and the staff – who, by the way, were exceptional. [Employee Name] really went out of her way to make sure everyone got what they needed, whether it was directions, recommendations, or help with their transportation. I had a great time meeting everyone and socializing yet when I wanted to, I could get a quiet night’s sleep."
+    }
+]
