@@ -79,6 +79,43 @@ if (!parsed.success) {
 
 const raw = parsed.data;
 
+/**
+ * Splits CORS_ORIGINS into exact origins and wildcard patterns.
+ *
+ * `*` expands to `[^.]*` — it matches within a single hostname label and never
+ * across a dot. That distinction is the whole security boundary here:
+ * `https://*-basitbcs-projects.vercel.app` then matches only hostnames whose
+ * final labels are exactly `basitbcs-projects.vercel.app`, a namespace Vercel
+ * only lets that team publish under.
+ *
+ * Keep the team suffix in any pattern you add. A bare `https://*.vercel.app`
+ * would let anyone's Vercel deployment make credentialed calls to this API.
+ */
+function parseCorsOrigins(value: string | undefined, fallback: string) {
+  const entries = (value ? value.split(',') : [fallback])
+    .map((o) => o.trim().replace(/\/$/, ''))
+    .filter(Boolean);
+
+  const exact: string[] = [];
+  const patterns: RegExp[] = [];
+
+  for (const entry of entries) {
+    if (!entry.includes('*')) {
+      exact.push(entry);
+      continue;
+    }
+    const source = entry
+      .split('*')
+      .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+      .join('[^.]*');
+    patterns.push(new RegExp(`^${source}$`));
+  }
+
+  return { exact, patterns };
+}
+
+const parsedCorsOrigins = parseCorsOrigins(raw.CORS_ORIGINS, raw.SITE_BASE_URL);
+
 export const env = {
   ...raw,
   isProduction: raw.NODE_ENV === 'production',
@@ -88,9 +125,13 @@ export const env = {
    * the only origin that normally needs access — set CORS_ORIGINS only to add
    * more (a staging site, a separate admin host).
    */
-  corsOrigins: (raw.CORS_ORIGINS ? raw.CORS_ORIGINS.split(',') : [raw.SITE_BASE_URL])
-    .map((o) => o.trim().replace(/\/$/, ''))
-    .filter(Boolean),
+  corsOrigins: parsedCorsOrigins.exact,
+  /**
+   * Entries containing `*` become patterns. This exists for preview deploys:
+   * Vercel rebuilds the hostname on every push (discoverkashmir-<hash>-<team>
+   * .vercel.app), so an exact allowlist can never match one.
+   */
+  corsOriginPatterns: parsedCorsOrigins.patterns,
   /** Each driver has its own precondition; local has none. */
   uploadsEnabled:
     raw.STORAGE_DRIVER === 'local' ||

@@ -95,6 +95,12 @@ export async function buildApp(): Promise<FastifyInstance> {
       if (!origin) return callback(null, true);
       if (env.corsOrigins.includes(origin)) return callback(null, true);
 
+      // Wildcard entries in CORS_ORIGINS, e.g. a Vercel preview namespace whose
+      // hostname carries a fresh build hash on every deploy.
+      if (env.corsOriginPatterns.some((pattern) => pattern.test(origin))) {
+        return callback(null, true);
+      }
+
       // In development, accept ANY localhost port. Next silently moves to 3001
       // when 3000 is taken, and pinning a single port there turns a routine
       // port shuffle into a wall of CORS failures across the whole admin.
