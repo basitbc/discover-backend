@@ -166,20 +166,23 @@ export function registerImageRoutes(app: FastifyInstance): void {
     },
   );
 
-  /** Editing alt text is the main reason to update an image. */
-  app.patch(
-    '/admin/images/:id',
-    {
-      ...auth,
-      schema: {
-        tags: ['admin:images'],
-        summary: 'Update image details (alt text, name, folder)',
-        params: idParam,
-        body: updateSchema,
-        security: [{ bearerAuth: [] }],
-      },
+  /**
+   * Editing alt text is the main reason to update an image. PUT is an alias for
+   * PATCH here for the same reason as in crud.routes.ts — networks that drop
+   * PATCH outright.
+   */
+  app.route({
+    method: ['PATCH', 'PUT'],
+    url: '/admin/images/:id',
+    ...auth,
+    schema: {
+      tags: ['admin:images'],
+      summary: 'Update image details (alt text, name, folder)',
+      params: idParam,
+      body: updateSchema,
+      security: [{ bearerAuth: [] }],
     },
-    async (request) => {
+    handler: async (request) => {
       const { id } = request.params as z.infer<typeof idParam>;
       if (!(await prisma.image.findUnique({ where: { id }, select: { id: true } }))) {
         throw notFound('Image');
@@ -189,7 +192,7 @@ export function registerImageRoutes(app: FastifyInstance): void {
         data: request.body as z.infer<typeof updateSchema>,
       });
     },
-  );
+  });
 
   app.delete(
     '/admin/images/:id',

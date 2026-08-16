@@ -153,25 +153,37 @@ export function registerCrudRoutes(app: FastifyInstance, config: CrudRouteConfig
     },
   );
 
-  app.patch(
-    `${adminBase}/:id`,
-    {
-      ...auth,
-      schema: {
-        tags: [`admin:${resource}`],
-        summary: `Update a ${singular.toLowerCase()}`,
-        params: idParam,
-        body: config.updateSchema,
-        security: [{ bearerAuth: [] }],
-      },
+  /**
+   * PATCH is the correct verb for a partial update, and PUT is registered
+   * alongside it as an alias sharing the same handler and schema.
+   *
+   * The alias is not academic. Corporate proxies, security appliances and some
+   * browser extensions still treat PATCH as unrecognised and drop it — the
+   * request never reaches the server, and the browser reports it as a CORS
+   * failure ("Method PATCH is not allowed by Access-Control-Allow-Methods")
+   * even though the API answers that preflight correctly. PUT traverses those
+   * middleboxes, so the admin has a route that works on networks where PATCH
+   * does not. Both apply the same partial-update semantics: absent fields are
+   * left untouched.
+   */
+  app.route({
+    method: ['PATCH', 'PUT'],
+    url: `${adminBase}/:id`,
+    ...auth,
+    schema: {
+      tags: [`admin:${resource}`],
+      summary: `Update a ${singular.toLowerCase()}`,
+      params: idParam,
+      body: config.updateSchema,
+      security: [{ bearerAuth: [] }],
     },
-    async (request) => {
+    handler: async (request) => {
       const { id } = request.params as z.infer<typeof idParam>;
       const row = await service.update(id, request.body as Row);
       revalidate(row);
       return row;
     },
-  );
+  });
 
   app.delete(
     `${adminBase}/:id`,
